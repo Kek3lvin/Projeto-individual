@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Início{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block content %}
+<div id="content">
+    <div class="container">
+            {% csrf_token %}
+            <div class="row">
+                <input type="hidden" value="{{produto.id}}" name="id">
+                <h5 for="Produto" class="col-md-2">Produto</h5>
+                <input value="{{produto.Produto}}" name="Produto" disabled>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    {% if produto.destaque %}
+                    <input type="checkbox" checked name="destaque"  disabled>
+                    {% else %}
+                    <input type="checkbox" name="destaque" disabled>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    {% if produto.promocao %}
+                    <input type="checkbox" checked name="promocao" disable>
+                    {% else %}
+                    <input type="checkbox" name="promocao" disabled>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <input value="{{produto.msgPromocao}}" name="msgPromocao" disabled>
+            </div>
+            <div class="row">
+                <a href={% url 'produto' %} class="btn bg-secondary col-md-2 mt-3"><i class="fafa-rotate-left"></i> Retornar</a>
+            </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
