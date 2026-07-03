@@ -1,6 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import *
 
 class FabricanteAdmin(admin.ModelAdmin):
@@ -15,6 +13,7 @@ class ProdutoAdmin(admin.ModelAdmin):
 admin.site.register(Fabricante,FabricanteAdmin)
 admin.site.register(Categoria)
 admin.site.register(Produto, ProdutoAdmin)
+admin.site.register(Usuario)
 
 
 # código para acessar: http://127.0.0.1:8080/admin
