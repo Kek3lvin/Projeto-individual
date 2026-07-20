@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Detalhes do Fabricante{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block content %}
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <h5 class="col-md-2">Fabricante</h5>
+            <input value="{{ fabricante.Fabricante }}" class="form-control col-md-4" disabled>
+        </div>
+        <div class="row mt-3">
+            <a href="{% url 'fabricante' %}" class="btn bg-secondary col-md-2"><i class="fa fa-rotate-left"></i> Retornar</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
