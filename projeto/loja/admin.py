@@ -18,4 +18,5 @@ admin.site.register(Usuario)
 
 # código para acessar: http://127.0.0.1:8080/admin
 # código para rodar: python manage.py runserver 127.0.0.1:8080
+# comando para instalar o ambiente virtual: python -m venv venv
 # código para ativar os scripts: venv\Scripts\activate
