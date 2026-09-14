@@ -3,3 +3,4 @@ from .ProdutoView import *
 # remova a linha que puxa .UsuarioUrls e coloque:
 from .UsuarioView import *
 from .AuthView import *
+from .CarrinhoView  import *
